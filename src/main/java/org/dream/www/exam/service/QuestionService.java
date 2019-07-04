@@ -1,9 +1,12 @@
 package org.dream.www.exam.service;
 
+import org.dream.www.exam.po.Question;
 import org.springframework.web.multipart.MultipartFile;
 
 import org.dream.www.common.entity.WoPage;
 import org.dream.www.exam.dto.QuestionDto;
+
+import java.util.List;
 
 /** * @author 作者 E-mail:
  * @date 创建时间：2019年6月29日 上午10:30:41 
@@ -26,4 +29,5 @@ public interface QuestionService {
 
 	void update(QuestionDto q, MultipartFile imageFile, String dir);
 
+    List<Question> getSum(Integer id);
 }

@@ -11,7 +11,9 @@ public interface SysConstant {
 	String SESSION_ROLE_LIST = "rList";
 	String SESSION_USER_TABLE_URL = "url";
 	String SESSION_USER_UPDATE_DATA = "formData";
+	String SESSION_QUESTION_KNOWLEDGE = "kqList";
 	String SESSION_CHOICE_CREATE_QUESTIONID = "questionId";
+	String SESSION_UPDATE_PAPER_LIST = "pqkList";
 	WoResultCode ERR_LOGIN = new WoResultCode(102, "用户名或者密码不正确！");
 
 	WoResultCode ERR_LOGIN_NOT = new WoResultCode(104, "请登录！");

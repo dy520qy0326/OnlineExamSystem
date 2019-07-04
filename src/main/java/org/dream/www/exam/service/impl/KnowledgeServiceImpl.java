@@ -5,6 +5,8 @@ import java.util.List;
 import javax.annotation.Resource;
 import javax.transaction.Transactional;
 
+import org.dream.www.exam.po.Choice;
+import org.dream.www.exam.repository.ChoiceRepository;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -18,6 +20,7 @@ import org.dream.www.exam.repository.KnowledgeRepository;
 import org.dream.www.exam.service.KnowledgeService;
 import org.dream.www.sys.exception.SysException;
 import org.dream.www.sys.util.SysConstant;
+import sun.security.krb5.internal.tools.Klist;
 
 /**
  * Author: nitong
@@ -120,4 +123,15 @@ public class KnowledgeServiceImpl implements KnowledgeService {
 		}
 		
 	}
+
+	@Override
+	public List<KnowledgeDto> findAll() {
+
+		List<Knowledge>kList = knowledgeRepository.findAll();
+
+		return  KnowledgeDto.getDtos(kList);
+
+	}
+
+
 }

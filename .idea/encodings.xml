@@ -24,6 +24,10 @@
     <file url="file://$PROJECT_DIR$/web/WEB-INF/jsp/dictionary" charset="GBK" />
     <file url="file://$PROJECT_DIR$/web/WEB-INF/jsp/exam" charset="GBK" />
     <file url="file://$PROJECT_DIR$/web/WEB-INF/jsp/knowledge" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/web/WEB-INF/jsp/paper/create.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/web/WEB-INF/jsp/paper/papertable.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/web/WEB-INF/jsp/paper/selector.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/web/WEB-INF/jsp/paper/update.jsp" charset="GBK" />
     <file url="file://$PROJECT_DIR$/web/WEB-INF/jsp/permission" charset="GBK" />
     <file url="file://$PROJECT_DIR$/web/WEB-INF/jsp/question" charset="GBK" />
     <file url="file://$PROJECT_DIR$/web/WEB-INF/jsp/role" charset="GBK" />

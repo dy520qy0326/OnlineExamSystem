@@ -29,4 +29,8 @@ public interface KnowledgeService {
 	void update(KnowledgeDto k);
 
 	void create(KnowledgeDto k);
+
+    List<KnowledgeDto> findAll();
+
+
 }

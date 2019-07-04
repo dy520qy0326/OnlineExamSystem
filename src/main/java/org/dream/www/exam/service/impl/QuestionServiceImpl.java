@@ -1,6 +1,7 @@
 package org.dream.www.exam.service.impl;
 
 import java.io.File;
+import java.util.List;
 
 import javax.annotation.Resource;
 import javax.transaction.Transactional;
@@ -8,6 +9,7 @@ import javax.transaction.Transactional;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.dream.www.exam.repository.ChoiceRepository;
+import org.dream.www.exam.repository.PaperQuestionRepository;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -41,6 +43,9 @@ public class QuestionServiceImpl implements QuestionService {
 	private QuestionRepository questionRepository;
 	@Resource
 	private ChoiceRepository choiceRepository;
+
+	@Resource
+	private PaperQuestionRepository paperQuestionRepository;
 	@Override
 	public WoPage<QuestionDto> getPageDate(Long start, Long length, String search, String orderType) {
 		// 分页数据
@@ -116,6 +121,10 @@ public class QuestionServiceImpl implements QuestionService {
 		questionRepository.save(po);
 		return po.getId();
 
+	}
+	@Override
+	public List<Question> getSum(Integer id) {
+		return questionRepository.findAllByKnowledgeId(id);
 	}
 
 }
